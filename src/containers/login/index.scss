@@ -1,0 +1,44 @@
+.login-container {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.login-title {
+  font-size: 34px;
+  font-weight: bold;
+  font-family: Tahoma;
+  color: #383838;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.login-form-item {
+  height: 46px;
+  margin-bottom: 30px;
+  width: 100%;
+  font-size: 16px;
+}
+
+.login-form-password {
+  margin-bottom: 0px;
+}
+
+.login-forget-password {
+  color: #a8a8a8;
+  float: right;
+  line-height: 30px;
+}
+
+.login-divider {
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+  margin-bottom: 25px;
+}
