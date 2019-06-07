@@ -1,9 +1,11 @@
-const serve = require('koa-static');
 const Koa = require('koa');
+const serve = require('koa-static');
+const mount = require("koa-mount");
 const app = new Koa();
 
-// or use absolute paths
 app.use(serve(__dirname + '/build'));
+
+app.use(mount('/login', serve(__dirname + '/build')));
 
 app.listen(9999);
 

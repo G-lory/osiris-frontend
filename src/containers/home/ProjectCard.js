@@ -2,7 +2,7 @@ import React from 'react';
 import './ProjectCard.scss';
 import { Tooltip } from 'antd';
 
-export default function ProjectCard() {
+export default function ProjectCard({ settingFunc }) {
 
   return (
     <div className="project-card">
@@ -12,7 +12,7 @@ export default function ProjectCard() {
         </span>
         <span className="project-card-tool">
           <Tooltip title="打开项目设置">
-            <i className="iconfont icon-shezhi"></i>
+            <i className="iconfont icon-shezhi" onClick={settingFunc}></i>
           </Tooltip>
           <Tooltip title="星标">
             <i className="iconfont icon-icons-"></i>

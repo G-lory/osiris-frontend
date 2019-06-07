@@ -1,12 +1,16 @@
 import React from 'react';
 import { Row, Col } from 'antd';
 import ProjectCard from './ProjectCard';
+import ProjectSettingModal from './ProjectSettingModal';
 import './index.scss';
 
 
 export default function Login() {
 
+  // 左边菜单栏的选中项
   const [ selectedKey, setSelectedKey ] = React.useState(localStorage.getItem('selectedKey') || 'all');
+  // 项目配置对话框是否可见
+  const [ settingVisible, setSettingVisible ] = React.useState(false);
 
   const navConfigs = [
     {
@@ -52,6 +56,10 @@ export default function Login() {
     setSelectedKey(key);
   }
 
+  function handleSetting() {
+    setSettingVisible(true);
+  }
+
   return (
     <div className="home-container">
       <Row type="flex" justify="center">
@@ -85,11 +93,12 @@ export default function Login() {
           </div>
           <div className="home-project-list">
             <div className="home-project-list-item">
-              <ProjectCard></ProjectCard>
+              <ProjectCard settingFunc={handleSetting}></ProjectCard>
             </div>
           </div>
         </Col>
       </Row>
+      <ProjectSettingModal visible={settingVisible} setVisible={setSettingVisible}></ProjectSettingModal>
     </div>
   );
 

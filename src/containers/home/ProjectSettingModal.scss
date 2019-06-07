@@ -1,0 +1,52 @@
+@import '../../styles/variable';
+
+.proj-set-model {
+  padding-bottom: 0 !important;
+}
+
+.proj-set-modal-title {
+  text-align: center;
+  font-size: 18px;
+  color: #383838;
+  font-weight: 700;
+}
+
+.proj-set-modal-tabs {
+  height: 100%;
+
+  .ant-tabs-nav {
+    width: 180px !important;
+  }
+  .ant-tabs-tab {
+    height: 56px;
+    padding: 0 20px !important;
+    margin: 0 !important;
+    text-align: left !important;
+    align-items: center;
+    overflow: hidden;
+    line-height: 56px;
+    border-bottom: 1px solid #e5e5e5;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 4px;
+      background-color: transparent;
+      transition: all 218ms;
+    }
+  }
+  .ant-tabs-tab-active {
+    &::before {
+      background-color: $primary-color;
+    }
+  }
+  .ant-tabs-ink-bar {
+    display: none !important;
+  }
+  .iconfont {
+    padding: 0 5px;
+  }
+}
