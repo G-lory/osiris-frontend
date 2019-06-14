@@ -66,7 +66,7 @@ function OverviewForm() {
         <div className="form-item-title">项目归属</div>
       </Row>
       <Row className="form-row">
-        <span><img src="https://dn-st.teambition.net/teambition/images/logo0.2bacc028.jpg" className="owner-avatar" />程林鑫的团队</span>
+        <span><img src="https://dn-st.teambition.net/teambition/images/logo0.2bacc028.jpg" alt="" className="owner-avatar" />程林鑫的团队</span>
       </Row>
     </div>
   );

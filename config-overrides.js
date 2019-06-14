@@ -15,5 +15,6 @@ module.exports = override(
     "src": path.resolve(__dirname, "src"),
     "styles": path.resolve(__dirname, "styles"),
     "containers": path.resolve(__dirname, "containers"),
+    "components": path.resolve(__dirname, "components"),
   }),
 );

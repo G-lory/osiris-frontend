@@ -3,9 +3,11 @@
 
 .home-container {
   min-width: 1000px;
-  padding-top: 40px;
-  //display: flex;
-  //justify-content: space-around;
+  top: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .home-nav {
