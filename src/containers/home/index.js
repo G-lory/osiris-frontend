@@ -5,7 +5,7 @@ import ProjectSettingModal from './ProjectSettingModal';
 import './index.scss';
 
 
-export default function Login() {
+export default function Home(props) {
 
   // 左边菜单栏的选中项
   const [ selectedKey, setSelectedKey ] = React.useState(localStorage.getItem('selectedKey') || 'all');
@@ -56,8 +56,13 @@ export default function Login() {
     setSelectedKey(key);
   }
 
-  function handleSetting() {
+  function handleSetting(e) {
+    e.stopPropagation(); // 阻止事件冒泡
     setSettingVisible(true);
+  }
+
+  function handleToProject() {
+    props.history.push('/project');
   }
 
   return (
@@ -93,7 +98,7 @@ export default function Login() {
           </div>
           <div className="home-project-list">
             <div className="home-project-list-item">
-              <ProjectCard settingFunc={handleSetting}></ProjectCard>
+              <ProjectCard settingFunc={handleSetting} onClick={handleToProject}></ProjectCard>
             </div>
           </div>
         </Col>

@@ -6,6 +6,7 @@ const app = new Koa();
 app.use(serve(__dirname + '/build'));
 
 app.use(mount('/login', serve(__dirname + '/build')));
+app.use(mount('/project', serve(__dirname + '/build')));
 
 app.listen(9999);
 
