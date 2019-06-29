@@ -11,7 +11,7 @@ export default function Header(props) {
   }
 
   return (
-    <div className="header-container">
+    <div className="header-container" style={ isHome ? { boxShadow: '0 0 8px 0 rgba(0,0,0,.1)' } : { boxShadow: '0 1px #f5f5f5' } }>
       <i className="iconfont icon-dock"></i>
       {
         isHome

@@ -1,0 +1,99 @@
+@import '../../styles/variable';
+
+.project-tab-bar {
+  display: flex;
+  border-bottom: 1px solid #d9d9d9;
+  z-index: 50;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: 49px;
+  cursor: pointer;
+}
+
+.project-tab-bar-active {
+  color: $primary-color;
+}
+
+.project-tab-bar-item {
+  line-height: 49px;
+  padding: 0 10px;
+}
+
+.project-tab {
+  .ant-tabs-top-content {
+    padding-top: 49px;
+  }
+}
+
+.project-navigation {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  height: 49px;
+  border-bottom: 1px solid #d9d9d9;
+  z-index: 50;
+  transition: right 218ms ease;
+
+  display: flex;
+
+  .nav-body {
+    margin-left: 38px;
+    display: flex;
+    flex-grow: 1;
+
+    .nav-wrapper {
+      display: flex;
+      height: 100%;
+
+      .nav-item {
+        padding: 14px 16px;
+        color: grey;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+          transition: opacity 218ms ease,border-width 218ms ease;
+          position: absolute;
+          left: 16px;
+          bottom: 0;
+          right: 16px;
+          height: 3px;
+          border-bottom: 0 solid $primary-color;
+          content: "";
+          opacity: 0;
+        }
+        
+        &.active {
+          color: #000;
+        }
+
+        &:hover, &.active {
+          &::after {
+            border-width: 3px;
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-footer {
+    margin-right: 14px;
+    display: flex;
+
+    .nav-menu-handler {
+      padding: 14px 6px 14px 8px;
+      margin: 0 4px;
+      display: inline-block;
+      text-align: center;
+      cursor: pointer;
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
