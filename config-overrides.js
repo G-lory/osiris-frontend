@@ -12,9 +12,9 @@ module.exports = override(
     modifyVars: { '@primary-color': '#7b88ff' },
   }),
   addWebpackAlias({
-    "src": path.resolve(__dirname, "src"),
-    "styles": path.resolve(__dirname, "styles"),
-    "containers": path.resolve(__dirname, "containers"),
-    "components": path.resolve(__dirname, "components"),
+    'src': path.resolve(__dirname, 'src'),
+    'styles': path.resolve(__dirname, 'src/styles'),
+    'containers': path.resolve(__dirname, 'src/containers'),
+    'components': path.resolve(__dirname, 'src/components'),
   }),
 );

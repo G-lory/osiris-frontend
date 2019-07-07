@@ -1,5 +1,6 @@
 import React from 'react';
 import './index.scss';
+import Board from 'src/containers/board';
 
 function renderNavigation() {
   return (
@@ -7,9 +8,8 @@ function renderNavigation() {
       <div className="nav-body">
         <div className="nav-wrapper">
           <div className="nav-item active">任务</div>
-          <div className="nav-item">分享</div>
-          <div className="nav-item">文件</div>
-          <div className="nav-item">日程</div>
+          <div className="nav-item">概览</div>
+          <div className="nav-item">统计</div>
         </div>
       </div>
       <div className="nav-footer">
@@ -33,6 +33,7 @@ export default function Project() {
       {
         renderNavigation()
       }
+      <Board></Board>
     </div>
   );
 }
