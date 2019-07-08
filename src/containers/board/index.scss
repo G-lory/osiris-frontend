@@ -1,3 +1,5 @@
+@import '../../styles/variable';
+
 .border-container {
   position: fixed;
   top: 97px;
@@ -15,39 +17,85 @@
     .board-left-panel {
       flex-basis: 298px;
       flex-shrink: 0;
-      height: 100%;
-      overflow: hidden auto;
 
-      // 设置滚动条样式
-      &::-webkit-scrollbar { // 滚动条整体部分，可以设置宽度
-        width: 7px;
-      }
-
-      &::-webkit-scrollbar-track { // 外层轨道
-        background-color: #e5e5e5;
-        border-left: 2px solid transparent;
-      }
-
-      &::-webkit-scrollbar-thumb { // 滚动的滑块
-        background-color: #a6a6a6;
-        border-left: 2px solid transparent;
-      }
-    }
-
-    .board-left-panel-indicator-wrapper {
-      width: 10px;
-      position: absolute;
-      left: 298px;
-      top: 0;
-      bottom: 0;
-      cursor: pointer;
-      display: flex;
-      flex-direction: column;
-
-      .indicator {
+      .board-tasklist-left-panel {
         width: 100%;
-        height: 30px;
+        height: 100%;
+        overflow: hidden auto;
+        // 设置滚动条样式
+        &::-webkit-scrollbar { // 滚动条整体部分，可以设置宽度
+          width: 7px;
+        }
+
+        &::-webkit-scrollbar-track { // 外层轨道
+          background-color: #e5e5e5;
+          border-left: 2px solid transparent;
+        }
+
+        &::-webkit-scrollbar-thumb { // 滚动的滑块
+          background-color: #a6a6a6;
+          border-left: 2px solid transparent;
+        }
       }
+
+      .board-left-panel-indicator-wrapper {
+        width: 14px;
+        position: absolute;
+        left: 298px;
+        top: 0;
+        bottom: 0;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        opacity: 0;
+        border-left: none;
+
+        .indicator {
+          width: 100%;
+          height: 30px;
+          background: #ccc;
+          color: #fff;
+          border-radius: 0 5px 5px 0;
+
+          .iconfont {
+            height: 30px;
+            line-height: 30px;
+            font-size: 14px;
+            font-weight: 900;
+          }
+
+          .icon-left-angle {
+            font-size: 12px;
+            display: none;
+          }
+        }
+
+        &:hover {
+
+          .indicator {
+            background: $primary-color;
+
+            .icon-shu {
+              display: none;
+            }
+
+            .icon-left-angle {
+              display: initial;
+            }
+          }
+
+          border-left: 2px solid $primary-color;
+        }
+
+      }
+
+      &:hover {
+        .board-left-panel-indicator-wrapper{
+          opacity: 1;
+        }
+      }
+
     }
 
     .board-right-view {
